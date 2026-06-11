@@ -749,8 +749,12 @@ h1 {
 }
 
 @media (max-width: 760px) {
+  html {
+    scroll-padding-top: 12px;
+  }
+
   .app-shell {
-    padding-inline: 12px;
+    padding: 12px 10px 36px;
   }
 
   .site-header {
@@ -761,9 +765,75 @@ h1 {
     padding: 14px 0;
   }
 
+  .brand {
+    font-size: 1rem;
+  }
+
+  .brand-mark {
+    width: 32px;
+    height: 32px;
+  }
+
   .site-nav {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     width: 100%;
-    justify-content: space-between;
+    gap: 10px;
+    font-size: 0.9rem;
+  }
+
+  .site-nav a {
+    text-align: center;
+  }
+
+  .site-nav a:first-child {
+    text-align: left;
+  }
+
+  .site-nav a:last-child {
+    text-align: right;
+  }
+
+  .demo-layout {
+    gap: 12px;
+    padding-top: 8px;
+  }
+
+  .visual-panel {
+    order: 1;
+    padding: 10px;
+  }
+
+  .summary-panel {
+    order: 2;
+  }
+
+  .teaching-panel {
+    order: 3;
+    gap: 16px;
+    padding: 22px;
+  }
+
+  h1 {
+    max-width: 100%;
+    margin-bottom: 16px;
+    font-size: clamp(2rem, 9vw, 2.58rem);
+    line-height: 1.08;
+  }
+
+  .lede,
+  .formula-block p,
+  .teaching-note {
+    font-size: 0.96rem;
+    line-height: 1.55;
+  }
+
+  .formula {
+    grid-template-columns: 82px 1fr;
+  }
+
+  .formula strong {
+    font-size: 0.8rem;
   }
 
   .control-bar,
@@ -781,6 +851,7 @@ h1 {
   .control-actions {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 7px;
   }
 
   .control-actions {
@@ -788,12 +859,55 @@ h1 {
   }
 
   .round-tab {
+    min-height: 42px;
     min-width: 0;
-    padding: 0 8px;
+    padding: 0 6px;
+    font-size: 0.82rem;
   }
 
   .canvas-shell {
+    aspect-ratio: 1 / 0.78;
     min-height: 0;
+  }
+
+  .boosting-svg {
+    width: 112%;
+    margin-inline: -6%;
+  }
+
+  .stump-label {
+    font-size: 12px;
+  }
+
+  .plot-footer {
+    gap: 9px 12px;
+    padding-top: 10px;
+    font-size: 0.78rem;
+  }
+
+  .summary-panel {
+    gap: 14px;
+    padding: 18px;
+  }
+
+  .learner-row {
+    grid-template-columns: 68px 1fr 38px;
+  }
+
+  .accuracy-pair {
+    gap: 12px;
+  }
+
+  .metric-block,
+  .learner-list,
+  .vote-block {
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .vote-block {
+    padding-bottom: 0;
+    border-bottom: 0;
   }
 
   .summary-panel,
@@ -803,17 +917,45 @@ h1 {
 
   .explain-band,
   .comparison-section {
+    margin-top: 12px;
     padding: 24px 18px;
+  }
+
+  .section-heading {
+    gap: 14px;
+    margin-bottom: 18px;
+  }
+
+  .section-heading h2,
+  .comparison-copy h2 {
+    font-size: clamp(1.72rem, 8vw, 2.25rem);
   }
 
   .step-card {
     min-height: auto;
+    padding: 20px;
   }
 
   .comparison-row > div:first-child,
   .accuracy-pair {
     align-items: flex-start;
     flex-direction: column;
+  }
+}
+
+@media (max-width: 380px) {
+  .site-nav {
+    font-size: 0.84rem;
+    padding-right: 10px;
+  }
+
+  .round-tab,
+  .primary-action {
+    font-size: 0.8rem;
+  }
+
+  .plot-footer {
+    column-gap: 10px;
   }
 }
 
