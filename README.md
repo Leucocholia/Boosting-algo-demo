@@ -15,3 +15,10 @@ npm run dev
 npm run build
 ```
 
+## Phone access
+
+Phone users do not need npm. After GitHub Pages deploys, open:
+
+```text
+https://leucocholia.github.io/Boosting-algo-demo/
+```
